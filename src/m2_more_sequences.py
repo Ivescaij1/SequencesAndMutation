@@ -16,9 +16,9 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_shortest_string()
-    # run_test_index_of_largest_number()
-    # run_test_number_of_stutters()
+    run_test_shortest_string()
+    run_test_index_of_largest_number()
+    run_test_number_of_stutters()
     run_test_is_palindrome()
     run_test_count_same()
 
@@ -398,9 +398,15 @@ def count_same(sequence1, sequence2):
       type: sequence2: tuple or list or string
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    length = len(sequence1)
+    same_count = 0
+    for k in range(length):
+        if sequence1[k] == sequence2[k]:
+            same_count = same_count + 1
+    return same_count
 
 
 # ----------------------------------------------------------------------
