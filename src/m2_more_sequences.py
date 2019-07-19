@@ -326,7 +326,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -335,6 +335,11 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
+    length = len(s)
+    for k in range(length // 2 - 1):
+        if s[k] != s[length - 1 - k]:
+            return False
+    return True
 
 
 # ----------------------------------------------------------------------
